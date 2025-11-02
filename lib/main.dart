@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:pulse_chain/core/routing/app_router.dart';
+import 'package:pulse_chain/core/theme/app_colors.dart';
 
 Future<void> main() async {
   runApp(const PulseChainApp());
@@ -14,13 +17,20 @@ class PulseChainApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'PulseChain Wallet',
-      theme: ThemeData(primarySwatch: Colors.blue),
-      home: Scaffold(
-        appBar: AppBar(title: const Text('PulseChain Wallet Home')),
-        body: const Center(child: Text('Welcome to PulseChain Wallet!')),
-      ),
+    return ScreenUtilInit(
+      designSize: const Size(375, 812),
+      minTextAdapt: true,
+      splitScreenMode: true,
+      builder: (context, child) {
+        return MaterialApp.router(
+          theme: ThemeData(
+            useMaterial3: true,
+            scaffoldBackgroundColor: AppColors.white,
+          ),
+          debugShowCheckedModeBanner: false,
+          routerConfig: AppRouter.goRouter,
+        );
+      },
     );
   }
 }
