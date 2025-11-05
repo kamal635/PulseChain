@@ -14,6 +14,9 @@ abstract final class AppColors {
   /// The card stroke color.
   static const Color cardStroke = Color(0xFFE2E8F0);
 
+  /// The Dark Gray color.
+  static const Color darkGray = Color(0xFF444444);
+
   /// The black color.
   static const Color black = Color(0xFF000000);
 

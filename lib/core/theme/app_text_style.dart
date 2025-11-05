@@ -13,10 +13,10 @@ abstract final class AppTextStyle {
   );
 
   /// Body text style.
-  static TextStyle get body => TextStyle(
-    fontSize: 16.sp,
+  static TextStyle get subtitle => TextStyle(
+    fontSize: 14.sp,
     fontWeight: FontWeight.normal,
-    color: const Color(0xFF444444),
+    color: const Color(0xFF666666),
   );
 
   /// Caption text style.
@@ -34,9 +34,9 @@ abstract final class AppTextStyle {
   );
 
   /// Subtitle text style.
-  static TextStyle get subtitle => TextStyle(
+  static TextStyle get body => TextStyle(
     fontSize: 14.sp,
     fontWeight: FontWeight.w500,
-    color: const Color(0xFF666666),
+    color: const Color(0xFF444444),
   );
 }

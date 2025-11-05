@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:pulse_chain/features/onboarding/presentation/models/feature_badge_content.dart';
-import 'package:pulse_chain/features/onboarding/presentation/widgets/feature_badge_chip.dart';
+import 'package:pulse_chain/features/onboarding/presentation/widgets/welcome/feature_badge_chip.dart';
 
 /// A list of feature badges displayed in a wrap layout.
 class FeatureBadgeLists extends StatelessWidget {

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:pulse_chain/core/theme/app_radius.dart';
 import 'package:pulse_chain/features/onboarding/presentation/models/permission_requirement.dart';
-import 'package:pulse_chain/features/onboarding/presentation/widgets/permission_requirement_card.dart';
+import 'package:pulse_chain/features/onboarding/presentation/widgets/welcome/permission_requirement_card.dart';
 
 /// A list of permission requirement cards.
 class PermissionRequirementsList extends StatelessWidget {

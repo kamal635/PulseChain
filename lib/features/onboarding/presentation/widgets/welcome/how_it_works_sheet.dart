@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:pulse_chain/core/constant/strings.dart';
 import 'package:pulse_chain/core/theme/export.dart';
 import 'package:pulse_chain/features/onboarding/presentation/models/how_it_works_steps.dart';
-import 'package:pulse_chain/features/onboarding/presentation/widgets/how_it_works_step_tile.dart';
+import 'package:pulse_chain/features/onboarding/presentation/widgets/welcome/how_it_works_step_tile.dart';
 
 /// A widget representing a bottom sheet in the "How It Works" section.
 class HowItWorksSheet extends StatelessWidget {

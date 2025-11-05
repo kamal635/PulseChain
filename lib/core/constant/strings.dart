@@ -71,4 +71,24 @@ No internet required. Messages can travel through nearby phones as you move.''';
   /// How It Works Step 3 Descriptions
   static const String howItWorksStep3Description =
       '''You’ll get a confirmation once your message reaches its destination, no matter the path it took.''';
+
+  /// Bluetooth Permission Titles
+  static const String titleBluetoothPermission = 'Enable Bluetooth access';
+
+  /// Bluetooth Permission Subtitles
+  static const String subtitleBluetoothPermission =
+      '''Discover and connect to nearby devices so messages can hop device-to-device.''';
+
+  /// Bluetooth Permission Info Card Text
+  static const String infoCardBluetoothPermission =
+      '''PulseChain will request Bluetooth access to find and connect to nearby. We don’t track your location.''';
+
+  ///  /// Allow Bluetooth Button Text
+  static const String allowBluetooth = 'Allow Bluetooth';
+
+  /// Not Granted Yet Text
+  static const String notGranted = 'Not garnted yet';
+
+  /// Not Now Button Text
+  static const String notNow = 'Not now';
 }
