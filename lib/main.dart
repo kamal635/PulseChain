@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:pulse_chain/bootstrap/responsive_screenutil_init.dart';
 import 'package:pulse_chain/core/routing/app_router.dart';
 import 'package:pulse_chain/core/theme/app_colors.dart';
 
@@ -17,11 +17,8 @@ class PulseChainApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return ScreenUtilInit(
-      designSize: const Size(375, 812),
-      minTextAdapt: true,
-      splitScreenMode: true,
-      builder: (context, child) {
+    return ResponsiveScreenUtilInit(
+      builder: (context) {
         return MaterialApp.router(
           theme: ThemeData(
             useMaterial3: true,

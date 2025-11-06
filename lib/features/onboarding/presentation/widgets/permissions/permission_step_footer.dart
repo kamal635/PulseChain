@@ -3,6 +3,7 @@ import 'package:pulse_chain/core/constant/strings.dart';
 import 'package:pulse_chain/core/theme/export.dart';
 import 'package:pulse_chain/core/widgets/custom_text_button.dart';
 import 'package:pulse_chain/core/widgets/primary_button.dart';
+import 'package:pulse_chain/features/onboarding/presentation/adapters/permission_status_ui.dart';
 import 'package:pulse_chain/features/onboarding/presentation/models/permission_wizard.dart';
 import 'package:pulse_chain/features/onboarding/presentation/widgets/permissions/export.dart';
 
@@ -40,7 +41,8 @@ class PermissionStepFooter extends StatelessWidget {
         spaceHeight(20),
 
         PermissionStatusChip(
-          permissionStatus: PermissionWizard.permissionsList[index].status.name,
+          permissionStatus:
+              PermissionWizard.permissionsList[index].status.label,
           textStyle: AppTextStyle.body.copyWith(
             color: PermissionWizard.permissionsList[index].status.color,
           ),

@@ -83,17 +83,34 @@ No internet required. Messages can travel through nearby phones as you move.''';
   static const String infoCardBluetoothPermission =
       '''PulseChain will request Bluetooth access to find and connect to nearby. We don’t track your location.''';
 
+  // ------------------ Android ≤ 11 (API ≤ 30) ------------------
   /// Location Permission Titles
-  static const String locationPermissionTitle =
+  static const String locationPermissionTitleRequired =
       'Allow Location (required by Android)';
 
   /// Location Permission Subtitles
-  static const String locationPermissionSubtitle =
+  static const String locationPermissionSubtitleRequired =
       '''Android requires Location to scan for Bluetooth reliably. We don’t track your location.''';
 
   /// Location Permission Info Card Text
-  static const String infoCardLocationPermission =
+  static const String infoCardLocationPermissionRequired =
       '''PulseChain requests Location permission to ensure reliable Bluetooth scanning on Android devices. We do not track or store your location data.''';
+
+  // -------------------- Android ≥ 12 (API ≥ 31) ---------------------
+
+  /// Location Permission Titles
+  static const String locationPermissionTitleNotRequired =
+      'Location access (not required on Android 12+)';
+
+  /// Location Permission Subtitles
+  static const String locationPermissionSubtitleNotRequired =
+      '''On Android 12+, Bluetooth scanning works without Location. We never track your location.''';
+
+  /// Location Permission Info Card Text
+  static const String infoCardLocationPermissionNotRequired =
+      '''Location is optional on Android 12+. Granting it may improve discovery on some devices, but it isn’t required''';
+
+  //-----------------------------------------------------------------
 
   /// Battery Optimization Titles
   static const String batteryOptimizationTitle =
