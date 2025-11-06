@@ -1,12 +1,19 @@
-import 'package:flutter/material.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:pulse_chain/core/constant/strings.dart';
 import 'package:pulse_chain/core/theme/export.dart';
+import 'package:pulse_chain/features/onboarding/presentation/models/permission_wizard.dart';
 
 /// Card widget to display information about permissions.
 class PermissionInfoCard extends StatelessWidget {
   /// Creates a [PermissionInfoCard] instance.
-  const PermissionInfoCard({super.key});
+  const PermissionInfoCard({
+    required this.index,
+
+    super.key,
+  });
+
+  /// The index of the current permission step.
+  final int index;
 
   @override
   Widget build(BuildContext context) {
@@ -14,7 +21,7 @@ class PermissionInfoCard extends StatelessWidget {
       margin: EdgeInsets.all(35.r),
       padding: EdgeInsets.all(12.r),
       decoration: BoxDecoration(
-        color: AppColors.surfaceLow,
+        color: AppColors.white,
         borderRadius: AppRadius.medium,
         boxShadow: const [
           BoxShadow(
@@ -34,7 +41,7 @@ class PermissionInfoCard extends StatelessWidget {
 
       child: Text(
         textAlign: TextAlign.start,
-        AppStrings.infoCardBluetoothPermission,
+        PermissionWizard.permissionsList[index].infoCardTitle,
         style: AppTextStyle.body,
       ),
     );

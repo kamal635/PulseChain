@@ -16,7 +16,7 @@ class WelcomePage extends StatelessWidget {
       bottomNavigationBar: const SafeArea(child: WelcomeCtaFooter()),
       appBar: AppBar(
         surfaceTintColor: Colors.transparent,
-        backgroundColor: AppColors.white,
+        backgroundColor: AppColors.background,
 
         /// The title of the app bar.
         title: Image.asset(

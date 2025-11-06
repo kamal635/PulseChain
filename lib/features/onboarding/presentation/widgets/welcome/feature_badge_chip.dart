@@ -30,7 +30,7 @@ class FeatureBadge extends StatelessWidget {
         mainAxisSize: MainAxisSize.min,
 
         children: [
-          Icon(icon, size: 16.w, color: AppColors.brandAccent),
+          Icon(icon, size: 16.w, color: AppColors.brandAccentGreen),
 
           spaceWidth(6),
 

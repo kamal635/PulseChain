@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:pulse_chain/core/constant/strings.dart';
+import 'package:pulse_chain/core/iconography/app_icons.dart';
 
 /// Model representing the content of a feature badge
 class FeatureBadgeContent {
@@ -19,15 +20,15 @@ class FeatureBadgeContent {
   static List<FeatureBadgeContent> get featureBadgeContents => [
     FeatureBadgeContent(
       title: AppStrings.chipOnDeviceEncryption,
-      icon: Icons.security,
+      icon: AppIcons.security,
     ),
     FeatureBadgeContent(
       title: AppStrings.chipMultiHopRelays,
-      icon: Icons.device_hub,
+      icon: AppIcons.deviceHub,
     ),
     FeatureBadgeContent(
       title: AppStrings.chipBatteryFriendly,
-      icon: Icons.battery_saver,
+      icon: AppIcons.batterySaver,
     ),
   ];
 }

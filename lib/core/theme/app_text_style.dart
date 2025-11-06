@@ -39,4 +39,11 @@ abstract final class AppTextStyle {
     fontWeight: FontWeight.w500,
     color: const Color(0xFF444444),
   );
+
+  /// Label text style.
+  static const TextStyle label = TextStyle(
+    fontSize: 10,
+    fontWeight: FontWeight.w400,
+    color: Color(0xFF555555),
+  );
 }

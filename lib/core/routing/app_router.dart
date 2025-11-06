@@ -16,7 +16,7 @@ abstract class AppRouter {
 
       GoRoute(
         path: RouterPath.permissions,
-        builder: (context, state) => const PermissionsPage(),
+        builder: (context, state) => const PermissionsWizardPage(),
       ),
     ],
   );

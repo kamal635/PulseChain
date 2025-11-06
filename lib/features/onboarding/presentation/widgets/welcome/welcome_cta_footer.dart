@@ -28,7 +28,7 @@ class WelcomeCtaFooter extends StatelessWidget {
             PrimaryButton(
               title: AppStrings.getstarted,
               onPressed: () {
-                context.go(RouterPath.permissions);
+                context.push(RouterPath.permissions);
               },
             ),
 

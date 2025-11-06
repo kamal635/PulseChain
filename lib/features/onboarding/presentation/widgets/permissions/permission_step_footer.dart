@@ -3,12 +3,23 @@ import 'package:pulse_chain/core/constant/strings.dart';
 import 'package:pulse_chain/core/theme/export.dart';
 import 'package:pulse_chain/core/widgets/custom_text_button.dart';
 import 'package:pulse_chain/core/widgets/primary_button.dart';
+import 'package:pulse_chain/features/onboarding/presentation/models/permission_wizard.dart';
+import 'package:pulse_chain/features/onboarding/presentation/widgets/permissions/export.dart';
 
 /// Footer section widget for permission requests.
 class PermissionStepFooter extends StatelessWidget {
   /// Creates a [PermissionStepFooter] instance.
-  const PermissionStepFooter({super.key});
+  const PermissionStepFooter({
+    required this.controller,
+    required this.index,
+    super.key,
+  });
 
+  /// The page controller to navigate between permission steps.
+  final PageController controller;
+
+  /// The index of the current permission step.
+  final int index;
   @override
   Widget build(BuildContext context) {
     return Column(
@@ -16,24 +27,25 @@ class PermissionStepFooter extends StatelessWidget {
         SizedBox(
           width: double.infinity,
           child: PrimaryButton(
-            title: AppStrings.allowBluetooth,
-            onPressed: () {},
+            title: AppStrings.continueText,
+            onPressed: () {
+              controller.nextPage(
+                duration: const Duration(milliseconds: 300),
+                curve: Curves.easeInOut,
+              );
+            },
           ),
         ),
 
         spaceHeight(20),
 
-        Container(
-          decoration: BoxDecoration(
-            color: AppColors.surfaceLow,
-            borderRadius: AppRadius.medium,
+        PermissionStatusChip(
+          permissionStatus: PermissionWizard.permissionsList[index].status.name,
+          textStyle: AppTextStyle.body.copyWith(
+            color: PermissionWizard.permissionsList[index].status.color,
           ),
-
-          child: Text(
-            textAlign: TextAlign.start,
-            AppStrings.notGranted,
-            style: AppTextStyle.body,
-          ),
+          colorChip: PermissionWizard.permissionsList[index].status.color
+              .withAlpha(40),
         ),
 
         spaceHeight(10),
@@ -41,7 +53,12 @@ class PermissionStepFooter extends StatelessWidget {
         SafeArea(
           child: CustomTextButton(
             title: AppStrings.notNow,
-            onPressed: () {},
+            onPressed: () {
+              controller.nextPage(
+                duration: const Duration(milliseconds: 300),
+                curve: Curves.easeInOut,
+              );
+            },
             colorText: AppColors.darkGray,
           ),
         ),

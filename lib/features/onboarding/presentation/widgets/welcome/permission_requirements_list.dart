@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:pulse_chain/core/iconography/app_icons.dart';
 import 'package:pulse_chain/core/theme/app_radius.dart';
 import 'package:pulse_chain/features/onboarding/presentation/models/permission_requirement.dart';
+import 'package:pulse_chain/features/onboarding/presentation/models/permission_wizard.dart';
 import 'package:pulse_chain/features/onboarding/presentation/widgets/welcome/permission_requirement_card.dart';
 
 /// A list of permission requirement cards.
@@ -21,15 +23,27 @@ class PermissionRequirementsList extends StatelessWidget {
 
           /// Builds each permission requirement card.
           child: PermissionRequirementCard(
-            trailingIcon: Icons.arrow_forward_ios,
+            requirementLabel: PermissionRequirementItem
+                .permissionRequirementItems[index]
+                .permissionStatus,
+            statusChipForeground:
+                PermissionWizard.permissionsList[index].status.color,
+            statusChipBackground: PermissionWizard
+                .permissionsList[index]
+                .status
+                .color
+                .withAlpha(40),
+            permissionStatus:
+                PermissionWizard.permissionsList[index].status.name,
+            trailingIcon: AppIcons.arrowForward,
             leadingIcon: PermissionRequirementItem
                 .permissionRequirementItems[index]
                 .icon,
 
-            title: PermissionRequirementItem
+            permissionTitle: PermissionRequirementItem
                 .permissionRequirementItems[index]
                 .title,
-            subTitle: PermissionRequirementItem
+            permissionDescription: PermissionRequirementItem
                 .permissionRequirementItems[index]
                 .subTitle,
           ),
