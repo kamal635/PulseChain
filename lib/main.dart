@@ -25,7 +25,7 @@ class PulseChainApp extends StatelessWidget {
         return MaterialApp.router(
           theme: ThemeData(
             useMaterial3: true,
-            scaffoldBackgroundColor: AppColors.white,
+            scaffoldBackgroundColor: AppColors.background,
           ),
           debugShowCheckedModeBanner: false,
           routerConfig: AppRouter.goRouter,

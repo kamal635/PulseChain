@@ -71,4 +71,69 @@ No internet required. Messages can travel through nearby phones as you move.''';
   /// How It Works Step 3 Descriptions
   static const String howItWorksStep3Description =
       '''You’ll get a confirmation once your message reaches its destination, no matter the path it took.''';
+
+  /// Bluetooth Permission Titles
+  static const String bluetoothPermissionTitle = 'Enable Bluetooth access';
+
+  /// Bluetooth Permission Subtitles
+  static const String bluetoothPermissionSubtitle =
+      '''Discover and connect to nearby devices so messages can hop device-to-device.''';
+
+  /// Bluetooth Permission Info Card Text
+  static const String infoCardBluetoothPermission =
+      '''PulseChain will request Bluetooth access to find and connect to nearby. We don’t track your location.''';
+
+  /// Location Permission Titles
+  static const String locationPermissionTitle =
+      'Allow Location (required by Android)';
+
+  /// Location Permission Subtitles
+  static const String locationPermissionSubtitle =
+      '''Android requires Location to scan for Bluetooth reliably. We don’t track your location.''';
+
+  /// Location Permission Info Card Text
+  static const String infoCardLocationPermission =
+      '''PulseChain requests Location permission to ensure reliable Bluetooth scanning on Android devices. We do not track or store your location data.''';
+
+  /// Battery Optimization Titles
+  static const String batteryOptimizationTitle =
+      'Keep relays working in the background';
+
+  /// Battery Optimization Subtitles
+  static const String batteryOptimizationSubtitle =
+      'Disable battery optimization to prevent the OS from pausing relays';
+
+  /// Battery Optimization Info Card Text
+  static const String infoCardBatteryOptimization =
+      'Exclude PulseChain from optimization';
+
+  /// Allow Bluetooth Button Text
+  static const String allowBluetooth = 'Allow Bluetooth';
+
+  /// Allow Location Button Text
+  static const String allowLocation = 'Allow Location';
+
+  /// Not Granted Yet Text
+  static const String notGranted = 'Not granted yet';
+
+  /// Granted Text
+  static const String granted = 'Granted';
+
+  /// Denied Text
+  static const String denied = 'Denied';
+
+  /// Continue Button Text
+  static const String continueText = 'Continue';
+
+  /// Not Now Button Text
+  static const String notNow = 'Not now';
+
+  /// The permission is required.
+  static const String required = 'Required';
+
+  /// The permission is android only.
+  static const String androidOnly = 'Android only';
+
+  ///  /// The permission is recommended.
+  static const recommended = 'Recommended';
 }

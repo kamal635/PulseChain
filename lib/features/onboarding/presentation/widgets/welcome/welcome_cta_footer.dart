@@ -1,8 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 import 'package:pulse_chain/core/constant/strings.dart';
+import 'package:pulse_chain/core/routing/router_path.dart';
 import 'package:pulse_chain/core/theme/export.dart';
+import 'package:pulse_chain/core/widgets/custom_text_button.dart';
 import 'package:pulse_chain/core/widgets/primary_button.dart';
-import 'package:pulse_chain/features/onboarding/presentation/widgets/how_it_works_sheet.dart';
+import 'package:pulse_chain/features/onboarding/presentation/widgets/welcome/how_it_works_sheet.dart';
 
 /// A footer widget containing the call-to-action button.
 class WelcomeCtaFooter extends StatelessWidget {
@@ -22,15 +25,16 @@ class WelcomeCtaFooter extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
             spaceHeight(5),
-            const PrimaryButton(title: AppStrings.getstarted),
+            PrimaryButton(
+              title: AppStrings.getstarted,
+              onPressed: () {
+                context.push(RouterPath.permissions);
+              },
+            ),
 
             spaceHeight(10),
 
-            TextButton(
-              style: TextButton.styleFrom(
-                overlayColor: Colors.transparent,
-                splashFactory: NoSplash.splashFactory,
-              ),
+            CustomTextButton(
               onPressed: () async {
                 await showModalBottomSheet<void>(
                   context: context,
@@ -39,12 +43,8 @@ class WelcomeCtaFooter extends StatelessWidget {
                   },
                 );
               },
-              child: Text(
-                AppStrings.howitworks,
-                style: AppTextStyle.button.copyWith(
-                  color: AppColors.brandPrimary,
-                ),
-              ),
+
+              title: AppStrings.howitworks,
             ),
 
             spaceHeight(20),
