@@ -108,6 +108,7 @@ class PermissionRequirementCard extends StatelessWidget {
               spaceWidth(10),
               Icon(
                 trailingIcon,
+                color: AppColors.darkGray.withAlpha(100),
                 size: 18.w,
               ),
             ],

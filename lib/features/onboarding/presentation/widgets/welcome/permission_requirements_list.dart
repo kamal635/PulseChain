@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:pulse_chain/core/iconography/app_icons.dart';
 import 'package:pulse_chain/core/theme/app_radius.dart';
+import 'package:pulse_chain/features/onboarding/presentation/adapters/permission_status_ui.dart';
 import 'package:pulse_chain/features/onboarding/presentation/models/permission_requirement.dart';
 import 'package:pulse_chain/features/onboarding/presentation/models/permission_wizard.dart';
 import 'package:pulse_chain/features/onboarding/presentation/widgets/welcome/permission_requirement_card.dart';
@@ -34,7 +35,7 @@ class PermissionRequirementsList extends StatelessWidget {
                 .color
                 .withAlpha(40),
             permissionStatus:
-                PermissionWizard.permissionsList[index].status.name,
+                PermissionWizard.permissionsList[index].status.label,
             trailingIcon: AppIcons.arrowForward,
             leadingIcon: PermissionRequirementItem
                 .permissionRequirementItems[index]

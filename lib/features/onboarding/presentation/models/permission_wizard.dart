@@ -1,27 +1,7 @@
 import 'package:flutter/widgets.dart';
 import 'package:pulse_chain/core/constant/strings.dart';
 import 'package:pulse_chain/core/iconography/app_icons.dart';
-import 'package:pulse_chain/core/theme/export.dart';
-
-/// Enum representing the status of a permission.
-enum PermissionStatus {
-  /// Permission has been granted.
-  granted(AppStrings.granted, AppColors.brandAccentGreen),
-
-  /// Permission has been denied.
-  denied(AppStrings.denied, AppColors.errorRed),
-
-  /// Permission has not been granted yet.
-  notGrantedYet(AppStrings.notGranted, AppColors.darkGray);
-
-  const PermissionStatus(this.name, this.color);
-
-  /// The key associated with the permission status.
-  final String name;
-
-  /// The color associated with the permission status.
-  final Color color;
-}
+import 'package:pulse_chain/domain/entities/permission_types.dart';
 
 /// Model representing a permission step in the onboarding wizard.
 class PermissionWizard {
@@ -59,18 +39,18 @@ class PermissionWizard {
       status: PermissionStatus.notGrantedYet,
     ),
     PermissionWizard(
-      title: AppStrings.locationPermissionTitle,
-      description: AppStrings.locationPermissionSubtitle,
+      title: AppStrings.locationPermissionTitleRequired,
+      description: AppStrings.locationPermissionSubtitleRequired,
       icon: AppIcons.location,
-      infoCardTitle: AppStrings.infoCardLocationPermission,
-      status: PermissionStatus.denied,
+      infoCardTitle: AppStrings.infoCardLocationPermissionRequired,
+      status: PermissionStatus.notGrantedYet,
     ),
     PermissionWizard(
       title: AppStrings.batteryOptimizationTitle,
       description: AppStrings.batteryOptimizationSubtitle,
       icon: AppIcons.batterySaver,
       infoCardTitle: AppStrings.infoCardBatteryOptimization,
-      status: PermissionStatus.granted,
+      status: PermissionStatus.notGrantedYet,
     ),
   ];
 }
