@@ -2,13 +2,11 @@ import 'package:flutter/cupertino.dart';
 
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:pulse_chain/core/theme/export.dart';
-import 'package:pulse_chain/features/onboarding/presentation/models/permission_wizard.dart';
 
 /// Small info card with a label and an iOS-style toggle.
 class PermissionInfoToggleCard extends StatelessWidget {
   /// Creates a [PermissionInfoToggleCard] instance.
   const PermissionInfoToggleCard({
-    required this.index,
     required this.label,
     required this.value,
     required this.onChanged,
@@ -16,20 +14,18 @@ class PermissionInfoToggleCard extends StatelessWidget {
     super.key,
   });
 
-  /// The index of the current permission step.
-  final int index;
-
-  /// The label for the permission info.
+  /// The label for the toggle.
   final String label;
 
-  /// The current value of the permission setting.
+  /// The current value of the toggle.
   final bool value;
 
-  /// Callback when the permission setting is changed.
+  /// Callback when the toggle value changes.
   final ValueChanged<bool> onChanged;
 
-  /// The icon to display in the info card.
+  /// The icon representing the permission step.
   final IconData icon;
+
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -80,7 +76,7 @@ class PermissionInfoToggleCard extends StatelessWidget {
           Flexible(
             child: Text(
               textAlign: TextAlign.start,
-              PermissionWizard.permissionsList[index].infoCardTitle,
+              label,
               style: AppTextStyle.body,
             ),
           ),

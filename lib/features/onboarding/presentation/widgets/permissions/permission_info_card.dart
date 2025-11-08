@@ -1,19 +1,14 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:pulse_chain/core/theme/export.dart';
-import 'package:pulse_chain/features/onboarding/presentation/models/permission_wizard.dart';
 
-/// Card widget to display information about permissions.
+/// Info card displaying permission information.
 class PermissionInfoCard extends StatelessWidget {
   /// Creates a [PermissionInfoCard] instance.
-  const PermissionInfoCard({
-    required this.index,
+  const PermissionInfoCard({required this.infoCardTitle, super.key});
 
-    super.key,
-  });
-
-  /// The index of the current permission step.
-  final int index;
+  /// The title for the info card related to the permission step.
+  final String infoCardTitle;
 
   @override
   Widget build(BuildContext context) {
@@ -33,15 +28,13 @@ class PermissionInfoCard extends StatelessWidget {
           BoxShadow(
             blurRadius: 3,
             offset: Offset(0, 1),
-
             color: Color(0xffE2E8F0),
           ),
         ],
       ),
-
       child: Text(
+        infoCardTitle,
         textAlign: TextAlign.start,
-        PermissionWizard.permissionsList[index].infoCardTitle,
         style: AppTextStyle.body,
       ),
     );

@@ -1,6 +1,6 @@
 import 'package:go_router/go_router.dart';
 import 'package:pulse_chain/core/routing/router_path.dart';
-import 'package:pulse_chain/features/onboarding/presentation/pages/permissions_page.dart';
+import 'package:pulse_chain/features/onboarding/presentation/pages/permissions_wizard_page.dart';
 import 'package:pulse_chain/features/onboarding/presentation/pages/welcome_page.dart';
 
 /// AppRouter sets up the GoRouter for the application.
