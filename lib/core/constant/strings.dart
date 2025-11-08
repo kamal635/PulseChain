@@ -148,6 +148,9 @@ No internet required. Messages can travel through nearby phones as you move.''';
   /// The permission is required.
   static const String required = 'Required';
 
+  /// The permission is not required.
+  static const String notRequired = 'Not Required';
+
   /// The permission is android only.
   static const String androidOnly = 'Android only';
 

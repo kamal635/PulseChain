@@ -9,11 +9,11 @@ class PermissionRequirementCard extends StatelessWidget {
   const PermissionRequirementCard({
     required this.leadingIcon,
     required this.trailingIcon,
-    required this.permissionTitle,
-    required this.permissionDescription,
+    required this.reqPermissionTitle,
+    required this.reqPermissionSubtitle,
     required this.permissionStatus,
     required this.statusChipBackground,
-    required this.statusChipForeground,
+    required this.statusChipColorText,
     required this.requirementLabel,
     super.key,
   });
@@ -25,22 +25,22 @@ class PermissionRequirementCard extends StatelessWidget {
   final IconData trailingIcon;
 
   /// The title of the permission requirement.
-  final String permissionTitle;
+  final String reqPermissionTitle;
 
   /// The subtitle of the permission requirement.
-  final String permissionDescription;
-
-  /// The permission status text to display.
-  final String permissionStatus;
+  final String reqPermissionSubtitle;
 
   /// The static permission requirement label.
   final String requirementLabel;
+
+  /// The permission status text to display.
+  final String permissionStatus;
 
   /// The background color of the chip.
   final Color statusChipBackground;
 
   /// The text color of the chip.
-  final Color statusChipForeground;
+  final Color statusChipColorText;
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -80,7 +80,7 @@ class PermissionRequirementCard extends StatelessWidget {
                       children: [
                         Flexible(
                           child: Text(
-                            permissionTitle,
+                            reqPermissionTitle,
                             style: AppTextStyle.body.copyWith(
                               color: AppColors.black,
                             ),
@@ -99,7 +99,7 @@ class PermissionRequirementCard extends StatelessWidget {
                     ),
                     spaceHeight(5),
                     Text(
-                      permissionDescription,
+                      reqPermissionSubtitle,
                       style: AppTextStyle.subtitle,
                     ),
                   ],
@@ -120,7 +120,7 @@ class PermissionRequirementCard extends StatelessWidget {
               permissionStatus: permissionStatus,
               colorChip: statusChipBackground,
               textStyle: AppTextStyle.label.copyWith(
-                color: statusChipForeground,
+                color: statusChipColorText,
               ),
             ),
           ),

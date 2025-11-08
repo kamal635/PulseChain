@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:pulse_chain/bootstrap/responsive_screenutil_init.dart';
 import 'package:pulse_chain/core/routing/app_router.dart';
 import 'package:pulse_chain/core/theme/app_colors.dart';
 
 Future<void> main() async {
-  runApp(const PulseChainApp());
+  WidgetsFlutterBinding.ensureInitialized();
+  runApp(const ProviderScope(child: PulseChainApp()));
 }
 
 /// Root application widget for PulseChain.
