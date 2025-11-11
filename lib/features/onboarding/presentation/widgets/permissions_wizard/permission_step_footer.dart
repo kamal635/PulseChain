@@ -5,7 +5,7 @@ import 'package:pulse_chain/core/widgets/custom_text_button.dart';
 import 'package:pulse_chain/core/widgets/primary_button.dart';
 import 'package:pulse_chain/domain/entities/permission_types.dart';
 import 'package:pulse_chain/features/onboarding/presentation/adapters/permission_status_ui.dart';
-import 'package:pulse_chain/features/onboarding/presentation/widgets/permissions/export.dart';
+import 'package:pulse_chain/features/onboarding/presentation/widgets/permissions_wizard/export.dart';
 
 /// Footer widget for permission steps in the onboarding wizard.
 class PermissionStepFooter extends StatelessWidget {

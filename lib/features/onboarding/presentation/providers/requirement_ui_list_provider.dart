@@ -12,7 +12,9 @@ final Provider<List<PermissionRequirementItem>> requirementUiListProvider =
     Provider<List<PermissionRequirementItem>>((ref) {
       final requirements = ref.watch(permissionsListProvider);
 
-      final sdk = ref.watch(sdkIntProvider).value;
+      final sdk = ref
+          .watch(sdkIntProvider)
+          .maybeWhen(data: (v) => v, orElse: () => null);
       final labelRequired = sdk != null && sdk <= 30;
 
       final label = labelRequired

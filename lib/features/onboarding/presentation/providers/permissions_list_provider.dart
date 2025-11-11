@@ -26,10 +26,7 @@ class PermissionStep {
 final permissionsListProvider = Provider<List<PermissionStep>>((ref) {
   final sdk = ref
       .watch(sdkIntProvider)
-      .maybeWhen(
-        data: (v) => v,
-        orElse: () => null,
-      );
+      .maybeWhen(data: (v) => v, orElse: () => null);
 
   // Location is required only on Android 11 and lower (API ≤ 30).
   final locationRequired = sdk != null && sdk <= 30;

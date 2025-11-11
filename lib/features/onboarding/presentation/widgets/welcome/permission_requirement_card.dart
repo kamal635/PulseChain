@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:pulse_chain/core/theme/export.dart';
-import 'package:pulse_chain/features/onboarding/presentation/widgets/permissions/export.dart';
+import 'package:pulse_chain/features/onboarding/presentation/widgets/permissions_wizard/export.dart';
 
 /// A card widget representing a permission requirement.
 class PermissionRequirementCard extends StatelessWidget {
